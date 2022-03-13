@@ -19,9 +19,9 @@ function solve() {
         let title = titleElement.value;
         let message = messageElement.value;
 
-        recipientNameEl.value = null;
-        titleElement.value = null;
-        messageElement.value = null;
+        recipientNameEl.value = '';
+        titleElement.value = '';
+        messageElement.value = '';
 
         if (!recipientName || !title || !message) {
             return;
@@ -67,7 +67,9 @@ function solve() {
         });
 
         sendBtnElement.addEventListener('click',(el) => {
-           
+            recipientNameEl.value = '';
+            titleElement.value = '';
+            messageElement.value = '';
             let sendLiElement = document.createElement('li');
 
             let sendSpan = document.createElement('span');
@@ -88,9 +90,6 @@ function solve() {
 
             sentMailsElement[0].appendChild(sendLiElement);
             ulElement.removeChild(ulElement.lastChild);
-            recipientName = '';
-            title = '';
-            messageE = '';
         });
 
         delBtnElement.addEventListener('click',(el) => {
@@ -115,4 +114,3 @@ function solve() {
     });
 
 }
-solve();
