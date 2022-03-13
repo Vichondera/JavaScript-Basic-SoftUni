@@ -44,7 +44,6 @@ function solve() {
         let sendBtnElement = document.createElement('button');
         sendBtnElement.type = 'submit';
         sendBtnElement.textContent = 'Send';
-        //liElement.appendChild(sendBtnElement);
         // Del Btn
         let delBtnElement = document.createElement('button');
         delBtnElement.type = 'submit';
@@ -52,8 +51,7 @@ function solve() {
 
         let divElement = document.createElement('div');
         divElement.id = 'list-action';
-        //liElement.appendChild(delBtnElement);
-        // Add to div
+
         divElement.appendChild(sendBtnElement);
         divElement.appendChild(delBtnElement);
         liElement.appendChild(divElement);
