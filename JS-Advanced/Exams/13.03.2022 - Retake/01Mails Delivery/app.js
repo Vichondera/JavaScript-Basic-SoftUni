@@ -65,9 +65,6 @@ function solve() {
         });
 
         sendBtnElement.addEventListener('click',(el) => {
-            recipientNameEl.value = '';
-            titleElement.value = '';
-            messageElement.value = '';
             let sendLiElement = document.createElement('li');
 
             let sendSpan = document.createElement('span');
